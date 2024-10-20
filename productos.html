@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Barbería - Productos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="main.js"></script>
+</head>
+<body class="bg-gray-100">
+    <header >
+        <nav class="bg-blue-800 ">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                  <button type="button" data-collapse-toggle="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                  <div class="flex flex-shrink-0 items-center">
+                    <img class="h-8 w-auto" src="img/logo2.png" alt="Teinda Barbería">
+                  </div>
+                  <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex space-x-4">
+                      <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Inicio</a>
+                      <a href="productos.html" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Productos</a>
+                      <a href="nosotros.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nosotros</a>
+                      <a href="contacto.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contacto</a>
+                      <a href="blog.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Blog</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="sm:hidden" id="mobile-menu">
+              <div class="space-y-1 px-2 pb-3 pt-2">
+                <a href="index.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Inicio</a>
+                      <a href="productos.html" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Productos</a>
+                      <a href="nosotros.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nosotros</a>
+                      <a href="contacto.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contacto</a>
+                      <a href="blog.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Blog</a>    
+              </div>
+            </div>
+          </nav>    
+      </header>
+
+  <section class="container mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
+    <h2 class="text-4xl font-extrabold text-center mb-4 text-blue-700">Nuestros Productos</h2>
+    <p class="text-gray-700 text-lg text-center mb-6">Descubre nuestra amplia selección de productos para el cuidado masculino.</p>
+    
+    <!-- Lista de productos -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+        <img src="img/aceite.jpg" alt="Aceite para Barba" class="w-full h-auto max-h-48 object-contain rounded-t-md">
+        <h3 class="text-xl font-semibold mt-4">Aceite para Barba Premium</h3>
+        <p class="text-gray-600 mt-2">Hidrata y nutre tu barba para mantenerla suave y brillante.</p>
+        <p class="text-lg font-bold text-blue-600 mt-2">$11.99</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Comprar Ahora</button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+        <img src="img/maquina de cortar.jpg" alt="Máquina de Corte Profesional" class="w-full h-auto max-h-48 object-contain rounded-t-md">
+        <h3 class="text-xl font-semibold mt-4">Máquina de Corte Profesional</h3>
+        <p class="text-gray-600 mt-2">Diseñada para un corte preciso y limpio. Ideal para uso profesional.</p>
+        <p class="text-lg font-bold text-blue-600 mt-2">$79.99</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Comprar Ahora</button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+        <img src="img/cera.jpg" alt="Cera para el Cabello" class="w-full h-auto max-h-48 object-contain rounded-t-md">
+        <h3 class="text-xl font-semibold mt-4">Cera para el Cabello</h3>
+        <p class="text-gray-600 mt-2">Proporciona fijación flexible y natural. Perfecta para cualquier estilo.</p>
+        <p class="text-lg font-bold text-blue-600 mt-2">$7.99</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Comprar Ahora</button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+        <img src="img/peine-a.jpg" alt="Peine Antiestático" class="w-full h-auto max-h-48 object-contain rounded-t-md">
+        <h3 class="text-xl font-semibold mt-4">Peine Antiestático</h3>
+        <p class="text-gray-600 mt-2">Evita la estática y ayuda a desenredar fácilmente el cabello.</p>
+        <p class="text-lg font-bold text-blue-600 mt-2">$4.99</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Comprar Ahora</button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+        <img src="img/espuma.jpg" alt="Espuma para Afeitar" class="w-full h-auto max-h-48 object-contain rounded-t-md">
+        <h3 class="text-xl font-semibold mt-4">Espuma para Afeitar</h3>
+        <p class="text-gray-600 mt-2">Proporciona una experiencia de afeitado suave y sin irritación.</p>
+        <p class="text-lg font-bold text-blue-600 mt-2">$5.99</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Comprar Ahora</button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+        <img src="img/shampoo.jpg" alt="Shampoo para Barba" class="w-full h-auto max-h-48 object-contain rounded-t-md">
+        <h3 class="text-xl font-semibold mt-4">Shampoo para Barba</h3>
+        <p class="text-gray-600 mt-2">Limpia profundamente y deja tu barba fresca y con un aroma agradable.</p>
+        <p class="text-lg font-bold text-blue-600 mt-2">$9.99</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Comprar Ahora</button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+        <img src="img/cepillo.jpg" alt="Cepillo para Barba" class="w-full h-auto max-h-48 object-contain rounded-t-md">
+        <h3 class="text-xl font-semibold mt-4">Cepillo para Barba</h3>
+        <p class="text-gray-600 mt-2">Desenreda y estiliza tu barba con facilidad gracias a sus cerdas naturales.</p>
+        <p class="text-lg font-bold text-blue-600 mt-2">$6.99</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Comprar Ahora</button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+        <img src="img/minoxidil.jpg" alt="Minoxidil para Crecimiento de Cabello" class="w-full h-auto max-h-48 object-contain rounded-t-md">
+        <h3 class="text-xl font-semibold mt-4">Minoxidil para Crecimiento de Cabello</h3>
+        <p class="text-gray-600 mt-2">Estimula el crecimiento del cabello y ayuda a prevenir la caída. Ideal para todo tipo de cabello.</p>
+        <p class="text-lg font-bold text-blue-600 mt-2">$29.99</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Comprar Ahora</button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col">
+        <img src="img/gel_cabello.jpg" alt="Gel para el Cabello Firme" class="w-full h-auto max-h-48 object-contain rounded-t-md">
+        <h3 class="text-xl font-semibold mt-4">Gel para el Cabello Firme</h3>
+        <p class="text-gray-600 mt-2">Proporciona una fijación duradera y brillante, manteniendo tu estilo todo el día.</p>
+        <p class="text-lg font-bold text-blue-600 mt-2">$6.99</p>
+        <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Comprar Ahora</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <footer class="bg-blue-800 mt-8">
+    <div class="container mx-auto py-4 text-center text-gray-300">
+      <p>&copy; 2024 Tienda Barbería. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
