@@ -53,9 +53,6 @@
                                         class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
                                     <a href="perfil.html" id="perfilLink"
                                         class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white hidden">Perfil</a>
-                                    <a href="carrito.html"
-                                        class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                                        aria-current="page">Carrito</a>
                                 </div>
                             </div>
                         </div>
@@ -78,13 +75,11 @@
                                 class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
                             <a href="perfil.html" id="perfilLink"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white hidden">Perfil</a>
-
-                            <a href="carrito.html"
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Carrito</a>
                         </div>
                     </div>
         </nav>
     </header>
+
 
     <section class="container mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
         <h2 class="text-4xl font-extrabold text-center mb-4 text-blue-700">Carrito de Compras</h2>
@@ -177,6 +172,7 @@
                 }
             });
 
+
             const { jsPDF } = window.jspdf;
 
             comprarBtn.addEventListener('click', async () => {
@@ -197,13 +193,19 @@
 
                 if (stockResponse.ok) {
                     const pdf = new jsPDF();
-
                     pdf.setFontSize(16);
-                    pdf.setTextColor(22, 160, 133);
-                    pdf.text("Factura de Compra", 20, 20);
+                    pdf.setTextColor(37, 99, 235);
+                    pdf.text("Factura de Compra", 20, 40);
                     pdf.setFontSize(12);
                     pdf.setTextColor(0, 0, 0);
+                    pdf.text(`Fecha: ${new Date().toLocaleDateString()}`, 150, 40);
+                    pdf.text(`Hora: ${new Date().toLocaleTimeString()}`, 150, 45);
 
+                    // Space before table
+                    pdf.setFontSize(12);
+                    pdf.text("Detalles de la Compra:", 20, 60);
+
+                    // Table
                     pdf.autoTable({
                         head: [['Nombre del Producto', 'Descripción', 'Precio', 'Cantidad', 'Subtotal']],
                         body: carrito.map(producto => {
@@ -217,17 +219,17 @@
                                 `$${totalProducto.toFixed(2)}`
                             ];
                         }),
-                        startY: 30,
+                        startY: 70,
                         margin: { horizontal: 10 },
-                        theme: 'grid',
+                        theme: 'striped',
                         styles: {
                             fontSize: 10,
-                            cellPadding: 4,
-                            lineColor: [22, 160, 133],
+                            cellPadding: 5,
+                            lineColor: [37, 99, 235],
                             lineWidth: 0.75,
                         },
                         headStyles: {
-                            fillColor: [22, 160, 133],
+                            fillColor: [37, 99, 235],
                             textColor: [255, 255, 255],
                             fontSize: 12,
                             halign: 'center',
@@ -249,11 +251,16 @@
                     const total = subtotal + iva;
 
                     const y = pdf.autoTable.previous.finalY + 10;
-                    pdf.setTextColor(22, 160, 133);
+                    pdf.setTextColor(0, 0, 0);
                     pdf.text(`Subtotal: $${subtotal.toFixed(2)}`, 20, y);
                     pdf.text(`IVA (15%): $${iva.toFixed(2)}`, 20, y + 10);
                     pdf.text(`Total: $${total.toFixed(2)}`, 20, y + 20);
 
+                    // Final message
+                    pdf.setTextColor(37, 99, 235);
+                    pdf.text("¡Gracias por su compra!", 20, y + 40);
+
+                    // Save PDF
                     pdf.save('factura_compra.pdf');
 
                     alert("Compra realizada con éxito");
@@ -263,8 +270,6 @@
                     alert("Error al procesar la compra");
                 }
             });
-
-
 
         });
     </script>
