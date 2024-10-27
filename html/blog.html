@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Barbería - Blog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="main.js"></script>
+</head>
+
+<body class="bg-gray-100">
+  <header>
+    <nav class="bg-blue-800 ">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <button type="button" data-collapse-toggle="mobile-menu"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex flex-shrink-0 items-center">
+              <img class="h-8 w-auto" src="/img/logo2.png" alt="Teinda Barbería">
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <a href="index.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Inicio</a>
+                <a href="productos.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Productos</a>
+                <a href="nosotros.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nosotros</a>
+                <a href="contacto.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contacto</a>
+                <a href="blog.html" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                  aria-current="page">Blog</a>
+                <a href="login.html" id="loginLink"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
+                <a href="perfil.html" id="perfilLink"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white hidden">Perfil</a>
+
+                <a href="carrito.html"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Carrito</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a href="index.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Inicio</a>
+          <a href="productos.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Productos</a>
+          <a href="nosotros.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Nosotros</a>
+          <a href="contacto.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contacto</a>
+          <a href="blog.html" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+            aria-current="page">Blog</a>
+          <a href="login.html" id="loginLink"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
+          <a href="perfil.html" id="perfilLink"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white hidden">Perfil</a>
+
+          <a href="carrito.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Carrito</a>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container mx-auto p-6 mt-8 bg-white rounded-lg shadow-md">
+    <h2 class="text-4xl font-extrabold text-center mb-4 text-blue-700">Nuestro Blog</h2>
+    <p class="text-gray-700 text-lg text-center mb-6">Descubre los mejores consejos y tendencias de cuidado personal en
+      nuestro blog. Aprende sobre las últimas novedades en productos de barbería, tips de cuidado del cabello y mucho
+      más.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <article class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-blue-700">Consejos para un Afeitado Perfecto</h3>
+        <p class="text-gray-600 mt-2">Un buen afeitado comienza con una preparación adecuada. Descubre nuestros tips
+          para lograr un afeitado suave y sin irritaciones, usando los productos que ofrecemos en nuestra tienda.</p>
+        <a href="#" class="text-blue-600 hover:text-blue-400 mt-2 block">Leer más &rarr;</a>
+      </article>
+      <article class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-blue-700">Guía para el Cuidado de la Barba</h3>
+        <p class="text-gray-600 mt-2">Una barba bien cuidada es símbolo de estilo y personalidad. Aprende a mantenerla
+          impecable con nuestros consejos de expertos y los mejores productos del mercado.</p>
+        <a href="#" class="text-blue-600 hover:text-blue-400 mt-2 block">Leer más &rarr;</a>
+      </article>
+      <article class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-blue-700">Tendencias de Estilo para este Año</h3>
+        <p class="text-gray-600 mt-2">Conoce las tendencias de peinados y estilos de barba que dominarán este año y
+          mantente siempre a la vanguardia con nuestras recomendaciones.</p>
+        <a href="#" class="text-blue-600 hover:text-blue-400 mt-2 block">Leer más &rarr;</a>
+      </article>
+      <article class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-blue-700">Productos Esenciales para el Cuidado Capilar</h3>
+        <p class="text-gray-600 mt-2">Desde champús hasta aceites, descubre los productos que no pueden faltar en tu
+          rutina de cuidado capilar y cómo sacarles el mejor provecho.</p>
+        <a href="#" class="text-blue-600 hover:text-blue-400 mt-2 block">Leer más &rarr;</a>
+      </article>
+    </div>
+  </section>
+
+  <footer class="bg-blue-600 text-white p-4 text-center mt-8">
+    <p>&copy; 2024 Tienda Barbería. Todos los derechos reservados.</p>
+    <p>Encuéntranos en nuestras redes sociales:</p>
+    <div class="flex justify-center space-x-4 mt-2">
+      <a href="#" class="hover:text-blue-300">Facebook</a>
+      <a href="#" class="hover:text-blue-300">Instagram</a>
+      <a href="#" class="hover:text-blue-300">Twitter</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleLoginPerfil() {
+      const loginLink = document.getElementById('loginLink');
+      const perfilLink = document.getElementById('perfilLink');
+
+      if (localStorage.getItem('usuario')) {
+        perfilLink.classList.remove('hidden');
+        loginLink.classList.add('hidden');
+      } else {
+        perfilLink.classList.add('hidden');
+        loginLink.classList.remove('hidden');
+      }
+    }
+
+    window.onload = toggleLoginPerfil;
+  </script>
+
+</body>
+
+</html>
